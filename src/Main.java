@@ -18,17 +18,17 @@ public class Main {
         KeyGenerator keyGen = KeyGenerator.getInstance("DES");
         keyGen.init(56);
         SecretKey key = keyGen.generateKey();
-        Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
-        //Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        //Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
 
         cipher.init(ENCRYPT_MODE, key);
         byte[] cText = cipher.doFinal(text.getBytes());
         System.out.println(Base64.getEncoder().encodeToString(cText));
 
-//        byte iv[] = cipher.getIV();
-//        IvParameterSpec dps = new IvParameterSpec(iv);
-//        cipher.init(DECRYPT_MODE, key, dps);
-        cipher.init(DECRYPT_MODE, key);
+        byte iv[] = cipher.getIV();
+        IvParameterSpec dps = new IvParameterSpec(iv);
+        cipher.init(DECRYPT_MODE, key, dps);
+        //cipher.init(DECRYPT_MODE, key);
         byte[] dText = cipher.doFinal(cText);
         System.out.println(new String(dText));
     }

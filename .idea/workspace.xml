@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f9e246-aa4a-4b4f-9777-062b8a28c6e1" name="Changes" comment="Simple code">
-      <change afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c4f9e246-aa4a-4b4f-9777-062b8a28c6e1" name="Changes" comment="Add DES ECB and CBC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -49,7 +47,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682673560878</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add DES ECB and CBC">
+      <created>1682676480728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682676480728</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -65,6 +70,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Simple code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simple code" />
+    <MESSAGE value="Add DES ECB and CBC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add DES ECB and CBC" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.jdks/openjdk-20.0.1/lib/src.zip!/java.base/javax/crypto/Cipher.java</url>
+          <line>372</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
