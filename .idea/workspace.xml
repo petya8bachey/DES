@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f9e246-aa4a-4b4f-9777-062b8a28c6e1" name="Changes" comment="Add report">
-      <change afterPath="$PROJECT_DIR$/src/DESdecrypt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DESencrypt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DESkeygen.java" afterDir="false" />
+    <list default="true" id="c4f9e246-aa4a-4b4f-9777-062b8a28c6e1" name="Changes" comment="It work OMG!!!">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DESdecrypt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DESencrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DESkeygen.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +36,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682677613246</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add some bags...">
+      <created>1683055829884</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683055829884</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,7 +98,9 @@
     <MESSAGE value="Simple code" />
     <MESSAGE value="Add DES ECB and CBC" />
     <MESSAGE value="Add report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add report" />
+    <MESSAGE value="Add some bags..." />
+    <MESSAGE value="It work OMG!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="It work OMG!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -101,14 +111,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DESencrypt.java</url>
-          <line>500</line>
+          <url>file://$PROJECT_DIR$/src/DES.java</url>
+          <line>430</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DESencrypt.java</url>
-          <line>501</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
