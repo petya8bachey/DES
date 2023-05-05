@@ -121,10 +121,6 @@ public class DES {
             1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1
     };
 
-    public DES() {
-        this.mode = "ECB";
-    }
-
     public DES(String mode) {
         this.mode = mode;
     }
@@ -135,7 +131,7 @@ public class DES {
             result[i] = (byte) (one[i] ^ two[i]);
         }
         return result;
-    }
+    } // XOR для массивов
 
     private byte[] permute(byte[] input, int[] mapping) {
         int byteCount = 1 + (mapping.length - 1) / 8;
@@ -148,7 +144,7 @@ public class DES {
             setBitInArray(output, i, value);
         }
         return output;
-    }
+    } // перестановка
 
     private int getBitFromArray(byte[] array, int pos) {
         int value;
@@ -156,7 +152,7 @@ public class DES {
         int bitPos = pos % 8;
         value = (array[bytePos] >> (8 - (bitPos + 1))) & 0x0001;
         return value;
-    }
+    } // получение бита из байтов
 
     private void setBitInArray(byte[] input, int pos, int value) {
         int bytePos = pos / 8;
@@ -165,7 +161,7 @@ public class DES {
         old = (byte) (((0xFF7F >> bitPos) & old) & 0x00FF);
         byte newByte = (byte) ((value << (8 - (bitPos + 1))) | old);
         input[bytePos] = newByte;
-    }
+    } // записывание бита в байты
 
     private byte[] hexStringToByteArray(String string) {
         int length = string.length();
@@ -181,7 +177,7 @@ public class DES {
             }
         }
         return result;
-    }
+    } // число (16 строку) в массив байт
 
     private byte[] getBits(byte[] input, int startPos, int length) {
         int noOfBytes = (length - 1) / 8 + 1;
@@ -191,7 +187,7 @@ public class DES {
             setBitInArray(output, i, value);
         }
         return output;
-    }
+    } // получение нескольких бит
 
     private byte[] rotateLeft(byte[] input, int step, int length) {
         int noOfBytes = (length - 1) / 8 + 1;
@@ -201,7 +197,7 @@ public class DES {
             setBitInArray(output, i, value);
         }
         return output;
-    }
+    } // сдвиг битов ключа
 
     private byte[] concatBits(byte[] one, int oneLength,
                               byte[] two, int twoLength) {
@@ -219,7 +215,7 @@ public class DES {
             j++;
         }
         return output;
-    }
+    } // склейка бит
 
     private byte[][] getSubKeys(byte[] masterKey) {
         int noOfSubKeys = SHIFTS.length;
@@ -235,17 +231,9 @@ public class DES {
             subKeys[i] = permute(subKey, PC2);
         }
         return subKeys;
-    }
+    } // создание ключа
 
     public byte[] crypt(byte[] message, byte[] key, String operation) {
-        if (message.length < 8) {
-            System.out.println("Message should be atleast 64 bits");
-            System.exit(1);
-        }
-        if (key.length != 8) {
-            System.out.println("Key should be 64 bits");
-            System.exit(1);
-        }
         int length = message.length;
         int n = (length + 7) / 8 * 8;
         byte[] cipher = new byte[n];
@@ -276,7 +264,7 @@ public class DES {
                 block[j] = message[i];
             }
             while (j < 8) {
-                block[j++] = 0x20;
+                block[j++] = 0x20; // 32
             }
             if (mode.equals("ECB")) {
                 result = cryptText(block, key, operation);
@@ -303,30 +291,10 @@ public class DES {
 
     private byte[] getInitializationVector() {
         return hexStringToByteArray("DCBE6AE7EA5D5C61");
-    }
-
-    private byte[] mergeBytes(byte[] in1, byte[] in2) {
-        byte[] out = new byte[in1.length + in2.length];
-        int i = 0;
-        for (int j = 0; j < in1.length; j++) {
-            out[i++] = in1[j];
-        }
-        for (int j = 0; j < in2.length; j++) {
-            out[i++] = in2[j];
-        }
-        return out;
-    }
+    } // получение вектора инициализации
 
     public byte[] cryptText(byte[] message, byte[] key, String operation) {
-        if (message.length != 8) {
-            System.out.println("Message should be 64 bits");
-            System.exit(1);
-        }
-        if (key.length != 8) {
-            System.out.println("Key should be 64 bits");
-            System.exit(1);
-        }
-        byte[] result = null;
+        byte[] result;
         int blockSize = IP.length;
         byte[][] subKeys = getSubKeys(key);
         int noOfRounds = subKeys.length;
@@ -354,7 +322,7 @@ public class DES {
         byte[] concatHalves = concatBits(rightHalf, blockSize / 2, leftHalf, blockSize / 2);
         result = permute(concatHalves, IIP);
         return result;
-    }
+    } // сеть Фейстеля
 
     public static byte[] XORBytes(byte[] in1, byte[] in2) {
         byte[] out = new byte[in1.length];
@@ -362,7 +330,7 @@ public class DES {
             out[i] = (byte) ((in1[i] ^ in2[i]) & 0xff);
         }
         return out;
-    }
+    } // XOR для CBC
 
     private byte[] sBox(byte[] input) {
         input = split(input, 6);
@@ -382,7 +350,7 @@ public class DES {
             }
         }
         return output;
-    }
+    } // преобразвание блока (разделение и трансформация по матрицам S1-8)
 
     private int[] getSBox(int i) {
         switch (i) {
@@ -405,7 +373,7 @@ public class DES {
             default:
                 return null;
         }
-    }
+    } // возвращение матрицы для преобразования
 
     private byte[] split(byte[] input, int length) {
         int noOfBytes = (8 * input.length - 1) / length + 1;
@@ -417,16 +385,16 @@ public class DES {
             }
         }
         return output;
-    }
+    } // разделение
 
     public static void main(String[] args) throws Exception {
         try {
+            System.out.println("Select the command: key encrypt decrypt and mode: ECB or CBC");
             Scanner scanner = new Scanner(System.in);
             File keyFile = new File("key.txt");
             String command = scanner.nextLine();
 
             if ("key".equals(command)) {
-
                 FileWriter fileWriter = new FileWriter(keyFile);
                 fileWriter.write("");
                 for (int i = 0; i < KEY_LENGTH; i++) {
@@ -439,8 +407,8 @@ public class DES {
                 }
             } else {
                 File textFile = new File("text.txt");
-                DES des = new DES();
-
+                String mode = scanner.nextLine();
+                DES des = new DES(mode);
                 FileReader keyFileReader = new FileReader(keyFile);
                 BufferedReader bufferedReader = new BufferedReader(keyFileReader);
                 String keyString = bufferedReader.readLine();
