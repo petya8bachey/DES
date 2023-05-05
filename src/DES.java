@@ -389,7 +389,7 @@ public class DES {
 
     public static void main(String[] args) throws Exception {
         try {
-            System.out.println("Select the command: key encrypt decrypt and mode: ECB or CBC");
+            System.out.println("Select the command: key encrypt decrypt");
             Scanner scanner = new Scanner(System.in);
             File keyFile = new File("key.txt");
             String command = scanner.nextLine();
@@ -401,11 +401,12 @@ public class DES {
                     double random = Math.random();
                     int index = (int) (random * 16);
                     fileWriter.append(hexArray[index]);
-                    fileWriter.flush();
-                    fileWriter.close();
-                    System.out.println("Key generated and saved in " + keyFile.getName());
                 }
+                fileWriter.flush();
+                fileWriter.close();
+                System.out.println("Key generated and saved in " + keyFile.getName());
             } else {
+                System.out.println("Select mode: ECB or CBC");
                 File textFile = new File("text.txt");
                 String mode = scanner.nextLine();
                 DES des = new DES(mode);

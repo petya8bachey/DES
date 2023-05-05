@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f9e246-aa4a-4b4f-9777-062b8a28c6e1" name="Changes" comment="It work OMG!!!">
+    <list default="true" id="c4f9e246-aa4a-4b4f-9777-062b8a28c6e1" name="Changes" comment="Add comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/ОИБ_СИБ_22_Скворцов_Пётр_Вячеславович_ЛР_3.doc" beforeDir="false" afterPath="$PROJECT_DIR$/report/ОИБ_СИБ_22_Скворцов_Пётр_Вячеславович_ЛР_3.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/ОИБ_СИБ_22_Скворцов_Пётр_Вячеславович_ЛР_4.doc" beforeDir="false" afterPath="$PROJECT_DIR$/report/ОИБ_СИБ_22_Скворцов_Пётр_Вячеславович_ЛР_4.doc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DES.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DES.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +41,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\IdeaProjects\DES" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683058098690</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add comments">
+      <created>1683283759428</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683283759428</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +117,8 @@
     <MESSAGE value="Add report" />
     <MESSAGE value="Add some bags..." />
     <MESSAGE value="It work OMG!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="It work OMG!!!" />
+    <MESSAGE value="Add comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -115,10 +130,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DES.java</url>
-          <line>398</line>
-          <option name="timeStamp" value="3" />
+          <line>402</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DES.java</url>
+          <line>410</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DES.java</url>
+          <line>411</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.IOException" package="java.io" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.FileWriter" memberName="se" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
